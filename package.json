@@ -1,0 +1,25 @@
+{
+  "name": "grpc-vs-graphql",
+  "version": "1.0.0",
+  "description": "A performance comparison between grpc and graphql",
+  "repository": "https://github.com/madforstrength/grpc-vs-graphql.git",
+  "author": "Muhammad Bilal <madforstrength@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "proto-gen": "yarn proto-loader-gen-types --grpcLib=@grpc.grpc-js --outDir=grpc/proto/ grpc/proto/*.proto",
+    "start-grpc-server": "npx ts-node grpc/server.ts",
+    "start-grpc-client": "npx ts-node grpc/client.ts",
+    "start-graphql-server": "npx ts-node graphql/server.ts",
+    "start-graphql-client": "npx ts-node graphql/client.ts"
+  },
+  "devDependencies": {
+    "@grpc/grpc-js": "^1.6.10",
+    "@grpc/proto-loader": "^0.7.0",
+    "apollo-server": "^3.10.1",
+    "apollo-server-core": "^3.10.1",
+    "graphql": "^16.5.0",
+    "graphql-request": "^4.3.0",
+    "ts-node": "^10.9.1",
+    "typescript": "^4.7.4"
+  }
+}
